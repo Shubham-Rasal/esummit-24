@@ -1,0 +1,14 @@
+/* CSS HEX */
+:root {
+  --black: #000000ff;
+  --white: #ffffffff;
+  --picton-blue: #29abe2ff;
+  --indigo-dye: #015277ff;
+  --prussian-blue: #072c42ff;
+}
+
+/* Add the variables to the CSS */
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
