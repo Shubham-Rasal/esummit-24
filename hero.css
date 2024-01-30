@@ -191,3 +191,31 @@ nav > a {
 	overflow: hidden;
 	z-index: 4;
 }
+
+.menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	width: 0;
+	overflow: hidden;
+	height: 100vh;
+	background: rgba(0, 53, 84, 0.516);
+	box-shadow: 0 8px 32px 0 rgba(31, 64, 135, 0.847);
+	backdrop-filter: blur(19.5px);
+	-webkit-backdrop-filter: blur(30.5px);
+	border-radius: 10px;
+	border: 1px solid rgba(255, 255, 255, 0.18);
+	z-index: 50;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.menu > a {
+	color: var(--white);
+	font-family: "Poppins", sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+}
