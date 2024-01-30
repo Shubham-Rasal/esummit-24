@@ -12,3 +12,60 @@ body {
     background-color: var(--black);
     color: var(--white);
 }
+*{
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --animate-duration: 2s;
+  --animate-delay: 10s;
+}
+.card{
+  height: 300px;
+  width: 400px;
+   padding: 20px;
+  color: white;
+  background-image: url("./images/Space.jpg");
+  background-size: cover;
+  display: flex;
+position: relative;
+  cursor: pointer;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(159, 157, 157, 0.33);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.content *{
+  transform: translateY(-70%);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.content h2{
+  font-size: 35px;
+  margin: 15px;
+  font-weight: 700;
+}
+
+.content h3{
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.card:hover .content{
+  opacity: 1;
+}
+
+.card:hover .content *{
+  opacity: 1;
+  transform: translateY(0);
+}

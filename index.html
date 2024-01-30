@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "style.css">
     <title>Document</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./output.css">
+    <link rel = "stylesheet" href = "style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 <body>
+    <div class="h-screen w-full">
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
-    </nav>    
+    </nav>  
+</div>  
+
+<div class="h-screen w-full flex flex-col bg-black justify-center items-center">
+    <div class="pt-10 mt-10">
+    <h1 class="text-5xl font-bold text-center text-slate-100 animate__animated animate__slower-3s animate__heartBeat animate__infinite">
+      Upcoming Events
+    </h1>
+  </div> 
+    <div class="h-full w-full flex-col justify-center">
+      
+        <div class="h-full w-full md:flex-row md:justify-center md:items-center flex flex-col items-center justify-center gap-10 p-10">
+        
+          <div class="card h-4/6 w-2/3 sm:h-2/3 sm:w-2/3 bg-[url('./images/E-talks.jpg')] bg-cover bg-center hover:shadow-xl hover:shadow-slate-300">
+            <div class="content" >
+                  <h2>E-Talks</h2>
+                  <span class="loading loading-spinner loading-lg"></span>
+                  <button class="btn btn-md mt-2">Past Talks</button>  
+            </div>
+        </div>
+          <div class="card h-4/6 w-2/3 sm:h-2/3 sm:w-2/3 bg-[url('./images/Competitions.jpg')] bg-cover bg-center hover:shadow-2xl hover:shadow-slate-300">
+            <div class="content" >
+                  <h2>Competitions</h2>
+                  <span class="loading loading-spinner loading-lg"></span>
+                  <button class="btn btn-md mt-2">Past Competitions</button>
+            </div>
+        </div>
+          <div class="card h-4/6 w-2/3 sm:h-2/3 sm:w-2/3 bg-[url('./images/Workshops.jpg')] bg-cover bg-center hover:shadow-2xl hover:shadow-slate-300">
+            <div class="content" >
+                  <h2>Workshops</h2>
+                  <span class="loading loading-spinner loading-lg"></span> 
+                  <button class="btn btn-md mt-2">Past Workshops</button>
+            </div>
+        </div>
+
+
+    </div> 
+
+   </div>
 </body>
 </html>
