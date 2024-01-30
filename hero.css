@@ -1,0 +1,193 @@
+/* CSS HEX */
+:root {
+	--black: #000000ff;
+	--white: #ffffffff;
+	--picton-blue: #29abe2;
+	--indigo-dye: #015277ff;
+	--prussian-blue: #072c42ff;
+}
+
+/* Add the variables to the CSS */
+body {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--black);
+}
+
+.wrapper {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	color: aliceblue;
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+	background-color: var(--black);
+}
+
+.wrapper > div {
+	width: 50%;
+}
+
+.hero-text-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.hero-text-container > img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100vh;
+	filter: saturate(0);
+	opacity: 40%;
+	mask-image: linear-gradient(to left, transparent, black 30%);
+}
+
+.hero-text-container > div {
+	margin: auto;
+	margin-inline: 60px;
+	margin-left: 100px;
+	z-index: 3;
+}
+
+.hero-text-container > div > h1 {
+	font-size: 60px;
+}
+
+.hero-text-container > div > h2 {
+	font-size: 20px;
+	margin-block: 10px;
+	margin-bottom: 20px;
+	color: var(--picton-blue);
+	font-weight: 500;
+}
+.hero-text-container > div > h3 {
+	font-size: 18px;
+	opacity: 0.7;
+	font-weight: 200;
+}
+
+.hero-text-container > div > a > div {
+	font-size: 18px;
+	background-color: var(--picton-blue);
+	padding: 14px 30px;
+	border-radius: 30px;
+	font-weight: 600;
+	margin-block: 30px;
+	text-decoration: none;
+	display: flex;
+	width: 220px;
+	text-decoration: none;
+	color: var(--black);
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	text-decoration: none;
+	transition: 200ms;
+}
+
+.hero-text-container > div > a > div:hover {
+	opacity: 0.7;
+}
+
+.hero-text-container > div > a > div > span {
+	font-weight: 500;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+
+	width: 100%;
+	height: 70px;
+	backdrop-filter: blur(1px) saturate(180%);
+	-webkit-backdrop-filter: blur(1px) saturate(180%);
+	background-color: rgba(17, 25, 40, 0.75);
+
+	border: 1px solid rgba(255, 255, 255, 0.125);
+	display: flex;
+	color: aliceblue;
+	display: flex;
+	padding-inline: 30px;
+	gap: 30px;
+	font-weight: 400;
+	align-items: center;
+}
+
+nav > a {
+	color: aliceblue;
+}
+
+.logodiv {
+	margin-right: auto;
+	font-weight: 600;
+	font-size: 25px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.logodiv > img {
+	height: 60px;
+}
+.logodiv > p {
+	font-size: 18px;
+	line-height: 20px;
+}
+
+.logodiv > p > b {
+	color: var(--picton-blue);
+	font-size: 12px;
+
+	font-weight: 400;
+}
+
+.hero-interactive {
+	background: url(public/main-img.svg);
+	background-position: center;
+	background-size: contain;
+
+	background-repeat: no-repeat;
+	filter: saturate(0);
+	height: 100vh;
+	z-index: 10;
+
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+}
+.hero-interactive > div {
+	width: 600px;
+	height: 600px;
+	background-color: var(--black);
+	transform: translateX(30%);
+	z-index: 20;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.hero-interactive > div > canvas {
+	background-color: var(--black);
+	width: 600px;
+	border-radius: 50%;
+	overflow: hidden;
+	z-index: 4;
+}
