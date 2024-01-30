@@ -9,6 +9,54 @@
 
 /* Add the variables to the CSS */
 body {
-    background-color: var(--black);
+    background-color: var(--black) !important;
     color: var(--white);
+}
+
+
+ /* Your footer styles */
+footer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 30rem;
+  background-color: #072c42ff;
+  text-align: center;
+  align-items: center;
+  row-gap: 20%;
+  color: #fff;
+  justify-content: center;
+}
+
+footer h2 {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3%;
+}
+
+footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 50%;
+  padding-top: 1%;
+  text-decoration: none;
+  padding-bottom: 3%;
+  border-bottom: 0.1rem solid #7f7f7f;
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer ul li {
+  padding-left:8%;
+  padding-right: 8%;
+  text-wrap: nowrap;
+
 }
