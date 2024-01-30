@@ -9,7 +9,7 @@
 
 /* Add the variables to the CSS */
 body {
-    background-color: var(--black) !important;
+    background-color: var(--black);
     color: var(--white);
 }
 
