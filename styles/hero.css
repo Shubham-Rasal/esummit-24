@@ -159,7 +159,7 @@ nav > a {
 }
 
 .hero-interactive {
-	background: url(public/main-img.svg);
+	background: url(../public/main-img.svg);
 	background-position: center;
 	background-size: contain;
 
