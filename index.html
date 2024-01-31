@@ -13,30 +13,45 @@
 		<script src="https://unpkg.com/cobe@1.0.0/dist/cobe.min.js"></script>
 	</head>
 	<body>
-		<div class="menu">
-			<a href="">Talks</a>
-			<a href="">Workshops</a>
-			<a href="">Competitions</a>
-			<a href="">Campus Ambassador Program</a>
-			<a href="">Close</a>
-		</div>
-		<div class="wrapper">
-			<nav>
-				<a class="logodiv" href="">
-					<div class="logodiv">
-						<img src="public/ecelllogo.svg" alt="" />
-						<p>
-							E - Summit ✨<br />
-							<b>x E Cell NITK</b><img src="" alt="" />
-						</p>
-					</div>
-				</a>
-
+		<!-- The nav bar with logo and menu items-->
+		<nav class="screen1_menu_container">
+			<a class="logodiv" href="">
+				<div class="logodiv">
+					<img src="public/ecelllogo.svg" alt="" />
+					<p>
+						E - Summit ✨<br />
+						<b>x E Cell NITK</b><img src="" alt="" />
+					</p>
+				</div>
+			</a>
+			<div class="navlinks">
 				<a href="">Talks</a>
 				<a href="">Workshops</a>
 				<a href="">Competitions</a>
 				<a href="">Campus Ambassador Program</a>
-			</nav>
+			</div>
+			<label for="screen1_menu_check" class="screen1_menu_btn">
+				<!-- checkbox to track when the hamburger menu is clicked on -->
+				<input type="checkbox" id="screen1_menu_check" />
+
+				<!-- the hamburger menu -->
+				<div class="screen1_menu_hamburger"></div>
+
+				<!-- menu items -->
+				<ul class="screen1_menu_items">
+					<li><a href=""> Talks 🎙️</a></li>
+					<li><a href=""> Workshops ⚙️</a></li>
+					<li><a href="">Competitions 🆚 </a></li>
+					<li>
+						<a href="">CAP 🧑‍🎓 </a>
+					</li>
+				</ul>
+			</label>
+		</nav>
+
+		<!-- The page body content for screen one -->
+
+		<div class="wrapper">
 			<div class="hero-text-container">
 				<div>
 					<h1>E-SUMMIT 2k24 🚀</h1>
@@ -81,12 +96,12 @@
 				mapSamples: 15000,
 				mapBrightness: 6,
 				baseColor: [0.1608, 0.6706, 0.8863],
-				markerColor: [1, 0.5, 1],
-				glowColor: [1, 1, 1],
+				markerColor: [0.161, 0.678, 0.886],
+				glowColor: [0.161, 0.678, 0.886],
 				markers: [
 					// add custom markers
-					{ location: [37.7595, -122.4367], size: 0.03 },
-					{ location: [40.7128, -74.006], size: 0.1 },
+
+					{ location: [12.9141, 74.5946], size: 0.15 },
 				],
 				onRender: (state) => {
 					// Called on every animation frame.
