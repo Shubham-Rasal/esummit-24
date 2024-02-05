@@ -7,20 +7,107 @@
 		<title>Document</title>
 	</head>
 	<body>
-		<!-- for cards  -->
-		<div class="card">
-			<div class="wrapper">
-			<img class="coverimage" src="AmanD.png" >
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- The nav bar with logo and menu items-->
+		<nav class="screen1_menu_container">
+			<a class="logodiv" href="">
+				<div class="logodiv">
+					<img src="public/ecelllogo.svg" alt="" />
+					<p>
+						E - Summit ✨<br />
+						<b>x E Cell NITK</b><img src="" alt="" />
+					</p>
+				</div>
+			</a>
+			<div class="navlinks">
+				<a href="">Talks</a>
+				<a href="">Workshops</a>
+				<a href="">Competitions</a>
+				<a href="">Campus Ambassador Program</a>
+			</nav>
 			</div>
-			<img class="title" src="darling.png">
-			<img class="character" src="qw-removebg-preview.png">
-		  </div>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+			<label for="screen1_menu_check" class="screen1_menu_btn">
+				<!-- checkbox to track when the hamburger menu is clicked on -->
+				<input type="checkbox" id="screen1_menu_check" />
+
+				<!-- the hamburger menu -->
+				<div class="screen1_menu_hamburger"></div>
+
+				<!-- menu items -->
+				<ul class="screen1_menu_items">
+					<li><a href=""> Talks 🎙️</a></li>
+					<li><a href=""> Workshops ⚙️</a></li>
+					<li><a href="">Competitions 🆚 </a></li>
+					<li>
+						<a href="">CAP 🧑‍🎓 </a>
+					</li>
+				</ul>
+			</label>
 		</nav>
+
+        <div class="wrapper">
+			<div class="hero-text-container">
+				<div>
+					<h1>E-SUMMIT 2k24 🚀</h1>
+					<h2>Inspire • Invent • Integrate</h2>
+					<h3>
+						E-Summit is the flagship event of the Entrepreneur Club at NITK,
+						Surathkal. Envisioned to create an entrepreneurial spirit amongst
+						the next generation of graduates; it is a multi-faceted event that
+						encompasses entrepreneurship talks, business workshops, panel
+						discussions and a pitching event.
+					</h3>
+					<a href="">
+						<div>
+							<p>Explore Now</p>
+						</div>
+					</a>
+				</div>
+				<img src="public/summit.png" />
+			</div>
+			<div class="hero-interactive">
+				<div><canvas width="600" height="600" id="cobe"></canvas></div>
+			</div>
+		</div>     
+
+		<script type="module">
+			import createGlobe from "https://cdn.skypack.dev/cobe";
+			let phi = 0;
+			let canvas = document.getElementById("cobe");
+			const globe = createGlobe(canvas, {
+				devicePixelRatio: 1,
+				width: 600,
+				height: 600,
+				phi: 1,
+				opacity: 0.5,
+				theta: 0.41,
+				dark: 1,
+				diffuse: 1.63,
+				mapSamples: 15000,
+				mapBrightness: 6,
+				baseColor: [0.1608, 0.6706, 0.8863],
+				markerColor: [1, 0.5, 1],
+				glowColor: [1, 1, 1],
+				markerColor: [0.161, 0.678, 0.886],
+				glowColor: [0.161, 0.678, 0.886],
+				markers: [
+					// add custom markers
+					{ location: [37.7595, -122.4367], size: 0.03 },
+					{ location: [40.7128, -74.006], size: 0.1 },
+
+					{ location: [12.9141, 74.5946], size: 0.15 },
+				],
+				onRender: (state) => {
+					// Called on every animation frame.
+					// `state` will be an empty object, return updated params.
+					state.phi = phi;
+					phi += 0.01;
+				},
+			});
+			globe.destory();
+		</script>
+
+
+	
 	</body>
 </html>
